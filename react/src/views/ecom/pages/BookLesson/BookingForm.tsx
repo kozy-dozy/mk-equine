@@ -7,6 +7,7 @@ import { SelectField, TextField } from '@/components/FormElements'
 import TextareaField from '@/components/FormElements/TextareaFIeld'
 import FormButton from '@/components/shared/FormButton'
 import { apiCreateBooking } from '@/services/ecom/BookingService'
+import { trackEvent } from '@/utils/analytics/googleAnalytics'
 import { yupFields } from '@/utils/validation/yupValidation'
 
 import type { AvailableSlot } from '@shared/dtos'
@@ -98,6 +99,7 @@ export default function BookingForm({
         helpers: FormikHelpers<BookingFormValues>,
     ) => {
         helpers.setStatus(null)
+        trackEvent('booking_submit', { lessonType: values.consultationType })
         try {
             await apiCreateBooking({
                 startDateTime: selectedSlot.startDateTime,
@@ -108,8 +110,10 @@ export default function BookingForm({
                 guestPhone: values.guestPhone.trim(),
                 notes: values.notes.trim(),
             })
+            trackEvent('booking_success', { lessonType: values.consultationType })
             onSuccess()
         } catch (err: any) {
+            trackEvent('booking_failed', { lessonType: values.consultationType })
             helpers.setStatus(err?.error || err?.message || 'Booking failed')
         } finally {
             helpers.setSubmitting(false)

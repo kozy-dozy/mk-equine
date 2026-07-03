@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components'
 
 import { CONTENT_CONFIG } from '@/config/content.config'
 import { SITE_IMAGES } from '@/config/site-images'
+import { trackEvent } from '@/utils/analytics/googleAnalytics'
 
 import { bp, Button, Divider, OutlineButton } from '../primitives'
 
@@ -93,8 +94,25 @@ export default function Hero() {
                     <Title>{CONTENT_CONFIG.home.heroTitle}</Title>
                     <Sub>{CONTENT_CONFIG.home.heroSubtitle}</Sub>
                     <Actions>
-                        <Button to="/book-lesson">Book a Lesson</Button>
-                        <OutlineButton to="/lessons" $onDark>
+                        <Button
+                            to="/book-lesson"
+                            onClick={() =>
+                                trackEvent('hero_cta_click', {
+                                    cta: 'book_a_lesson',
+                                })
+                            }
+                        >
+                            Book a Lesson
+                        </Button>
+                        <OutlineButton
+                            to="/lessons"
+                            $onDark
+                            onClick={() =>
+                                trackEvent('hero_cta_click', {
+                                    cta: 'explore_lessons',
+                                })
+                            }
+                        >
                             Explore Lessons
                         </OutlineButton>
                     </Actions>

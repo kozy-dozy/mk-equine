@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import styled from 'styled-components'
 
 import { SITE_IMAGES } from '@/config/site-images'
+import { trackEvent } from '@/utils/analytics/googleAnalytics'
 import SEO from '@/views/ecom/components/SEO'
 import {
     bp,
@@ -271,7 +272,16 @@ export default function LessonsPage() {
                                     ))}
                                 </Points>
                                 <Actions>
-                                    <Button to="/contact">Book This Lesson</Button>
+                                    <Button
+                                        to="/contact"
+                                        onClick={() =>
+                                            trackEvent('lesson_cta_click', {
+                                                lesson: lesson.title,
+                                            })
+                                        }
+                                    >
+                                        Book This Lesson
+                                    </Button>
                                 </Actions>
                             </RowBody>
                         </Row>
@@ -287,7 +297,16 @@ export default function LessonsPage() {
                             Not sure which lesson is right? Let’s figure it out
                             together.
                         </ClosingTitle>
-                        <Button to="/contact">Get In Touch</Button>
+                        <Button
+                            to="/contact"
+                            onClick={() =>
+                                trackEvent('lesson_cta_click', {
+                                    lesson: 'closing_get_in_touch',
+                                })
+                            }
+                        >
+                            Get In Touch
+                        </Button>
                     </Closing>
                 </Container>
             </Section>

@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import { SITE_IMAGES } from '@/config/site-images'
 import { apiListHorses } from '@/services/shared/HorseService'
+import { trackEvent } from '@/utils/analytics/googleAnalytics'
 import SEO from '@/views/ecom/components/SEO'
 
 import type { HorseDto } from '@shared/dtos'
@@ -412,7 +413,16 @@ export default function HorsesPage() {
                     </ServiceGrid>
 
                     <TrainingActions>
-                        <Button to="/contact">Inquire About Training</Button>
+                        <Button
+                            to="/contact"
+                            onClick={() =>
+                                trackEvent('training_inquiry_click', {
+                                    source: 'horses_training',
+                                })
+                            }
+                        >
+                            Inquire About Training
+                        </Button>
                     </TrainingActions>
                 </Container>
             </Section>
@@ -462,7 +472,18 @@ export default function HorsesPage() {
                                         )}
                                         <HorseFoot>
                                             <Price>{priceLabel(h)}</Price>
-                                            <InquireLink to="/contact">
+                                            <InquireLink
+                                                to="/contact"
+                                                onClick={() =>
+                                                    trackEvent(
+                                                        'horse_inquiry_click',
+                                                        {
+                                                            horse: h.name,
+                                                            status: h.status,
+                                                        },
+                                                    )
+                                                }
+                                            >
                                                 Inquire →
                                             </InquireLink>
                                         </HorseFoot>
@@ -487,7 +508,16 @@ export default function HorsesPage() {
                             Looking for training or your next horse? I'd love to
                             help.
                         </ClosingTitle>
-                        <Button to="/contact">Get In Touch</Button>
+                        <Button
+                            to="/contact"
+                            onClick={() =>
+                                trackEvent('horse_inquiry_click', {
+                                    source: 'horses_closing',
+                                })
+                            }
+                        >
+                            Get In Touch
+                        </Button>
                     </Closing>
                 </Container>
             </Section>
