@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "workspaces": ["react", "express"],
+  "scripts": {
+    "dev:react": "yarn workspace mk-equine-react dev",
+    "dev:express": "yarn workspace mk-equine-express dev",
+    "lint": "yarn workspace mk-equine-react lint && yarn workspace mk-equine-express lint",
+    "lint:fix": "yarn workspace mk-equine-react lint:fix && yarn workspace mk-equine-express lint:fix"
+  }
+}
