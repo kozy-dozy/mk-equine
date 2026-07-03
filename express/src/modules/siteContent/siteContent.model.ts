@@ -51,4 +51,4 @@ const SiteContentSchema = new mongoose.Schema(
     { timestamps: true },
 )
 
-export default mongoose.model('site_content', SiteContentSchema, 'siteContent')
+export default mongoose.model('site_content', SiteContentSchema, 'site_content')
