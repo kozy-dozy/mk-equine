@@ -24,7 +24,7 @@ export const CONTENT_CONFIG = {
                 links: [
                     { label: 'FAQ', href: '/faq' },
                     { label: 'Contact', href: '/contact' },
-                    { label: 'Book a Lesson', href: '/contact' },
+                    { label: 'Book a Lesson', href: '/book-lesson' },
                 ],
             },
             {

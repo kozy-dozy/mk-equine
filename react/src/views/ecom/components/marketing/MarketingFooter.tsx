@@ -191,7 +191,7 @@ export default function MarketingFooter() {
                         <ContactLine href={`mailto:${COMPANY_CONFIG.contact.email}`}>
                             {COMPANY_CONFIG.contact.email}
                         </ContactLine>
-                        <FooterLink to="/contact">Book a Lesson</FooterLink>
+                        <FooterLink to="/book-lesson">Book a Lesson</FooterLink>
                         <Tagline as="span" style={{ fontSize: '0.85rem' }}>
                             By appointment · Limited spots
                         </Tagline>

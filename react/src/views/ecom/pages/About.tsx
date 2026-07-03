@@ -346,7 +346,7 @@ export default function AboutPage() {
                         <ClosingTitle>
                             Let’s see if my program is the right fit for you.
                         </ClosingTitle>
-                        <Button to="/contact">Book a Lesson</Button>
+                        <Button to="/book-lesson">Book a Lesson</Button>
                     </Closing>
                 </Container>
             </Section>

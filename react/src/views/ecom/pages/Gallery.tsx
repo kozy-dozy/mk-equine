@@ -138,7 +138,7 @@ export default function GalleryPage() {
                             Come spend some time in the saddle—reach out to book
                             your first lesson.
                         </FootText>
-                        <Button to="/contact">Book a Lesson</Button>
+                        <Button to="/book-lesson">Book a Lesson</Button>
                     </Foot>
                 </Container>
             </Section>

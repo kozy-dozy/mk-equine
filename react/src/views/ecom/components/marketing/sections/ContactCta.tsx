@@ -78,7 +78,7 @@ export default function ContactCta() {
                     let’s find a time.
                 </Text>
                 <Actions>
-                    <Button to="/contact">Book a Lesson</Button>
+                    <Button to="/book-lesson">Book a Lesson</Button>
                     <OutlineButton to="/about" $onDark>
                         Meet Your Instructor
                     </OutlineButton>

@@ -273,7 +273,7 @@ export default function LessonsPage() {
                                 </Points>
                                 <Actions>
                                     <Button
-                                        to="/contact"
+                                        to="/book-lesson"
                                         onClick={() =>
                                             trackEvent('lesson_cta_click', {
                                                 lesson: lesson.title,
