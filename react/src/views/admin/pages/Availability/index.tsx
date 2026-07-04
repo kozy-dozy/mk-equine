@@ -141,6 +141,13 @@ const CheckboxRow = styled.label`
     user-select: none;
     font-size: ${({ theme }) => theme.fontSize.sm};
     color: ${({ theme }) => theme.colors.text.primary};
+
+    input[type='checkbox'] {
+        width: 16px;
+        height: 16px;
+        accent-color: ${({ theme }) => theme.colors.primary};
+        cursor: pointer;
+    }
 `
 
 const Actions = styled.div`

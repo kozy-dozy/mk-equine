@@ -1,7 +1,5 @@
-import classNames from 'classnames'
 import { forwardRef, useContext, useCallback, useState } from 'react'
-
-import { useConfig } from '../ConfigProvider'
+import styled from 'styled-components'
 
 import CheckboxGroupContext from './context'
 
@@ -23,17 +21,71 @@ export interface CheckboxProps extends CommonProps {
     field?: any
 }
 
+const CheckboxLabel = styled.label<{ $disabled?: boolean }>`
+    display: inline-flex;
+    align-items: center;
+    gap: ${({ theme }) => theme.spacing.sm};
+    cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'pointer')};
+    user-select: none;
+`
+
+const HiddenCheckbox = styled.input`
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    margin: 0;
+`
+
+const Box = styled.span`
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: ${({ theme }) => theme.radius.sm};
+    border: 1.5px solid ${({ theme }) => theme.colors.border.strong};
+    background: ${({ theme }) => theme.colors.bg.card};
+    color: ${({ theme }) => theme.colors.text.inverse};
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+
+    svg {
+        width: 12px;
+        height: 12px;
+        opacity: 0;
+        transition: opacity 0.15s ease;
+    }
+
+    ${HiddenCheckbox}:checked + & {
+        background: ${({ theme }) => theme.colors.primary};
+        border-color: ${({ theme }) => theme.colors.primary};
+
+        svg {
+            opacity: 1;
+        }
+    }
+
+    ${HiddenCheckbox}:focus-visible + & {
+        outline: 2px solid ${({ theme }) => theme.colors.primary};
+        outline-offset: 2px;
+    }
+`
+
+const LabelText = styled.span<{ $disabled?: boolean }>`
+    opacity: ${({ $disabled }) => ($disabled ? 0.5 : 1)};
+`
+
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
     const {
         name: nameContext,
         value: groupValue,
         onChange: onGroupChange,
-        color: colorContext,
     } = useContext(CheckboxGroupContext)
 
     const {
-        color,
-        className,
         onChange,
         children,
         disabled,
@@ -44,10 +96,11 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
         checked: controlledChecked,
         labelRef,
         field,
+        className,
+        // `color` was a legacy Tailwind accent prop; the styled control uses the theme
+        color: _color,
         ...rest
     } = props
-
-    const { themeColor, primaryColorLevel } = useConfig()
 
     const isChecked = useCallback(() => {
         if (typeof groupValue !== 'undefined' && typeof value !== 'undefined') {
@@ -123,27 +176,15 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
         ],
     )
 
-    const checkboxColor =
-        color || colorContext || `${themeColor}-${primaryColorLevel}`
-
-    const checkboxDefaultClass = `checkbox text-${checkboxColor}`
-    const checkboxColorClass = disabled && 'disabled'
-    const labelDefaultClass = `checkbox-label`
-    const labelDisabledClass = disabled && 'disabled'
-
-    const checkBoxClass = classNames(checkboxDefaultClass, checkboxColorClass)
-
-    const labelClass = classNames(
-        labelDefaultClass,
-        labelDisabledClass,
-        className,
-    )
-
     return (
-        <label ref={labelRef} className={labelClass}>
-            <input
+        <CheckboxLabel
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            ref={labelRef as any}
+            className={className}
+            $disabled={disabled}
+        >
+            <HiddenCheckbox
                 ref={ref}
-                className={checkBoxClass}
                 type="checkbox"
                 disabled={disabled}
                 readOnly={readOnly}
@@ -153,17 +194,21 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
                 {...field}
                 {...rest}
             />
+            <Box aria-hidden="true">
+                <svg viewBox="0 0 12 10" fill="none">
+                    <path
+                        d="M1 5.2 4.3 8.5 11 1.5"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
+                </svg>
+            </Box>
             {children ? (
-                <span
-                    className={classNames(
-                        'ltr:ml-2 rtl:mr-2',
-                        disabled ? 'opacity-50' : '',
-                    )}
-                >
-                    {children}
-                </span>
+                <LabelText $disabled={disabled}>{children}</LabelText>
             ) : null}
-        </label>
+        </CheckboxLabel>
     )
 })
 
