@@ -22,6 +22,23 @@ const AppShell = styled.div`
     min-height: 100vh;
 `
 
+const SkipLink = styled.a`
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1000;
+    padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.md}`};
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.text.inverse};
+    border-radius: ${({ theme }) => theme.radius.md};
+    text-decoration: none;
+
+    &:focus {
+        left: ${({ theme }) => theme.spacing.sm};
+        top: ${({ theme }) => theme.spacing.sm};
+    }
+`
+
 const HeaderStart = styled.div`
     display: flex;
     align-items: center;
@@ -191,13 +208,14 @@ const HeaderActionsEnd = () => {
 export default function EcomLayout() {
     return (
         <AppShell>
+            <SkipLink href="#main-content">Skip to main content</SkipLink>
             <AnnouncementBar />
             <Header
                 headerStart={<HeaderActionsStart />}
                 headerMiddle={null}
                 headerEnd={<HeaderActionsEnd />}
             />
-            <Main>
+            <Main as="main" id="main-content">
                 <Outlet />
             </Main>
             <Footer />

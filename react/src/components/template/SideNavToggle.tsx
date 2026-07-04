@@ -7,8 +7,12 @@ import useResponsive from '@/utils/hooks/useResponsive'
 
 import type { CommonProps } from '@/@types/common'
 
-const ToggleDiv = styled.div`
+const ToggleDiv = styled.button`
+    background: none;
+    border: none;
+    padding: 0;
     cursor: pointer;
+    color: inherit;
 `
 
 const StyledNavToggle = styled(NavToggle)`
@@ -30,7 +34,13 @@ const _SideNavToggle = ({ className }: CommonProps) => {
     return (
         <>
             {larger.md && (
-                <ToggleDiv className={className} onClick={onCollapse}>
+                <ToggleDiv
+                    type="button"
+                    aria-label="Toggle sidebar navigation"
+                    aria-expanded={!sideNavCollapse}
+                    className={className}
+                    onClick={onCollapse}
+                >
                     <StyledNavToggle toggled={sideNavCollapse} />
                 </ToggleDiv>
             )}

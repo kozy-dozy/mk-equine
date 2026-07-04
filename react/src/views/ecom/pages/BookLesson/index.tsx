@@ -478,13 +478,19 @@ export default function BookLessonPage() {
                                 <PanelTitle>Choose a Date</PanelTitle>
                                 <TzNote>Times shown in {TZ_LABEL}</TzNote>
                                 <MonthNav>
-                                    <NavBtn onClick={goPrevMonth} disabled={!canPrev}>
+                                    <NavBtn
+                                        aria-label="Previous month"
+                                        disabled={!canPrev}
+                                        onClick={goPrevMonth}
+                                    >
                                         ‹ Prev
                                     </NavBtn>
                                     <MonthLabel>
                                         {viewMonth.format('MMMM YYYY')}
                                     </MonthLabel>
-                                    <NavBtn onClick={goNextMonth}>Next ›</NavBtn>
+                                    <NavBtn aria-label="Next month" onClick={goNextMonth}>
+                                        Next ›
+                                    </NavBtn>
                                 </MonthNav>
                                 <CalendarGrid>
                                     {DOWS.map((d) => (
@@ -495,8 +501,16 @@ export default function BookLessonPage() {
                                         const inMonth =
                                             d.month() === viewMonth.month()
                                         const isPast = d.isBefore(today, 'day')
-                                        const hasSlots = (slotsByDate.get(key)?.length ?? 0) > 0
+                                        const slotCount =
+                                            slotsByDate.get(key)?.length ?? 0
+                                        const hasSlots = slotCount > 0
                                         const disabled = isPast || !hasSlots
+                                        const fullDate = d.format('MMMM D, YYYY')
+                                        const availabilityText = isPast
+                                            ? 'unavailable'
+                                            : hasSlots
+                                              ? `${slotCount} slot${slotCount === 1 ? '' : 's'} available`
+                                              : 'no availability'
                                         return (
                                             <DayCell
                                                 key={key}
@@ -505,12 +519,14 @@ export default function BookLessonPage() {
                                                 $selected={selectedDate === key}
                                                 $disabled={disabled}
                                                 disabled={disabled}
-                                                onClick={() => handleSelectDate(key)}
+                                                aria-label={`${fullDate}, ${availabilityText}`}
+                                                aria-pressed={selectedDate === key}
                                                 title={
                                                     hasSlots
-                                                        ? `${slotsByDate.get(key)?.length} slots available`
+                                                        ? `${slotCount} slots available`
                                                         : 'No availability'
                                                 }
+                                                onClick={() => handleSelectDate(key)}
                                             >
                                                 {d.date()}
                                             </DayCell>
@@ -543,24 +559,40 @@ export default function BookLessonPage() {
                                                 available
                                             </SlotsHeader>
                                             <SlotsGrid>
-                                                {slotsForSelected.map((s) => (
-                                                    <SlotChip
-                                                        key={s.startDateTime}
-                                                        $selected={
-                                                            selectedSlot?.startDateTime ===
-                                                            s.startDateTime
-                                                        }
-                                                        onClick={() => setSelectedSlot(s)}
-                                                    >
-                                                        {formatInTz(
-                                                            s.startDateTime,
-                                                            {
-                                                                hour: 'numeric',
-                                                                minute: '2-digit',
-                                                            },
-                                                        )}
-                                                    </SlotChip>
-                                                ))}
+                                                {slotsForSelected.map((s) => {
+                                                    const timeLabel = formatInTz(
+                                                        s.startDateTime,
+                                                        {
+                                                            hour: 'numeric',
+                                                            minute: '2-digit',
+                                                        },
+                                                    )
+                                                    const dateLabel = formatInTz(
+                                                        s.startDateTime,
+                                                        {
+                                                            month: 'long',
+                                                            day: 'numeric',
+                                                            year: 'numeric',
+                                                        },
+                                                    )
+                                                    return (
+                                                        <SlotChip
+                                                            key={s.startDateTime}
+                                                            $selected={
+                                                                selectedSlot?.startDateTime ===
+                                                                s.startDateTime
+                                                            }
+                                                            aria-label={`Book ${timeLabel} on ${dateLabel}, ${TZ_LABEL}`}
+                                                            aria-pressed={
+                                                                selectedSlot?.startDateTime ===
+                                                                s.startDateTime
+                                                            }
+                                                            onClick={() => setSelectedSlot(s)}
+                                                        >
+                                                            {timeLabel}
+                                                        </SlotChip>
+                                                    )
+                                                })}
                                             </SlotsGrid>
                                         </>
                                     )}

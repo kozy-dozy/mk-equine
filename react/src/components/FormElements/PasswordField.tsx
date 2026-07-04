@@ -28,11 +28,13 @@ export default function PasswordField({
     return (
         <FormItem
             className={className}
+            htmlFor={name}
             label={label}
             invalid={invalid}
             errorMessage={invalid ? errorMsg : undefined}
         >
             <Field
+                id={name}
                 name={name}
                 autoComplete={autoComplete}
                 placeholder={placeholder}

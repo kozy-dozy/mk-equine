@@ -34,6 +34,7 @@ export default function SelectField({
     return (
         <FormItem
             className={className}
+            htmlFor={name}
             label={label}
             invalid={invalid}
             errorMessage={invalid ? errorMsg : undefined}
@@ -53,6 +54,7 @@ export default function SelectField({
 
                     return (
                         <Select
+                            inputId={name}
                             field={field}
                             form={form}
                             options={options}

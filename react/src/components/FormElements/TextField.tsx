@@ -45,6 +45,7 @@ export default function TextField({
     return (
         <FormItem
             className={className}
+            htmlFor={name}
             label={label}
             invalid={invalid}
             errorMessage={invalid ? errorMsg : undefined}
@@ -53,6 +54,7 @@ export default function TextField({
                 {({ field, form }: any) => (
                     <Input
                         {...field}
+                        id={name}
                         type={type}
                         autoComplete={autoComplete}
                         inputMode={inputMode}
