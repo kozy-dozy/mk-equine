@@ -151,7 +151,7 @@ const More = styled.span`
 
 export default function LessonOptions() {
     return (
-        <Section id="lessons" $alt>
+        <Section $alt id="lessons">
             <Container>
                 <SectionHeader
                     center

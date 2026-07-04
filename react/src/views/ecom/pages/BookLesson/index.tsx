@@ -3,8 +3,8 @@ import { useEffect, useMemo, useState } from 'react'
 import styled from 'styled-components'
 
 import { apiGetAvailableSlots } from '@/services/ecom/BookingService'
-import useAuth from '@/utils/hooks/useAuth'
 import { useAppSelector } from '@/store'
+import useAuth from '@/utils/hooks/useAuth'
 import SEO from '@/views/ecom/components/SEO'
 
 import BookingForm from './BookingForm'
@@ -410,7 +410,7 @@ export default function BookLessonPage() {
                     <HeroInner>
                         <HeroTitle>Book a Lesson</HeroTitle>
                         <HeroSub>
-                            Pick a date and time that works for you and I'll
+                            Pick a date and time that works for you and I&apos;ll
                             confirm your spot. All times shown in {TZ_LABEL}.
                         </HeroSub>
                         <PackageList>
@@ -443,7 +443,9 @@ export default function BookLessonPage() {
                         <Panel style={{ maxWidth: 560, margin: '0 auto' }}>
                             <Success>
                                 <SuccessIcon>✓</SuccessIcon>
-                                <SuccessTitle>You're booked!</SuccessTitle>
+                                <SuccessTitle>
+                                    You&apos;re booked!
+                                </SuccessTitle>
                                 <SuccessMsg>
                                     {selectedSlot && (
                                         <>
@@ -466,7 +468,7 @@ export default function BookLessonPage() {
                                         </>
                                     )}
                                     <br />
-                                    I'll be in touch shortly to confirm your
+                                    I&apos;ll be in touch shortly to confirm your
                                     lesson. Looking forward to seeing you at the
                                     barn!
                                 </SuccessMsg>

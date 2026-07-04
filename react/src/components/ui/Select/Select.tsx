@@ -20,6 +20,7 @@ import type {
 } from 'react-select'
 import type { AsyncProps } from 'react-select/async'
 import type { CreatableProps } from 'react-select/creatable'
+
 const SelectOption = styled.div<{
     $isSelected: boolean
     $isDisabled: boolean

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import Table from '@/components/ui/Table'
 import MkEquine from '@/components/ui/MkEquine'
+import Table from '@/components/ui/Table'
 
 import type { MkEquineProps } from '@/components/ui/MkEquine'
 

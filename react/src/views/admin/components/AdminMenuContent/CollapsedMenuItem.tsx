@@ -1,9 +1,12 @@
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
 import AuthorityCheck from '@/components/shared/AuthorityCheck'
 import Dropdown from '@/components/ui/Dropdown'
 import Menu from '@/components/ui/Menu'
+
 import MenuIcon from './MenuIcon'
+
 import type { CommonProps } from '@/@types/common'
 import type { NavigationTree } from '@/@types/navigation'
 import type { Direction } from '@/@types/theme'

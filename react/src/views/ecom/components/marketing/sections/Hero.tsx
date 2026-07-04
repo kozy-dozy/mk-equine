@@ -105,8 +105,8 @@ export default function Hero() {
                             Book a Lesson
                         </Button>
                         <OutlineButton
-                            to="/lessons"
                             $onDark
+                            to="/lessons"
                             onClick={() =>
                                 trackEvent('hero_cta_click', {
                                     cta: 'explore_lessons',

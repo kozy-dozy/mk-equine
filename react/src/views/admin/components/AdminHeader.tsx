@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
+import SideNavToggle from '@/components/template/SideNavToggle'
 import ModeSwitcher from '@/components/template/ThemeConfigurator/ModeSwitcher'
 import UserDropdown from '@/components/template/UserDropdown'
-import SideNavToggle from '@/components/template/SideNavToggle'
 import AdminMobileNav from '@/views/admin/components/AdminMenuContent/AdminMobileNav'
 
 const HeaderEl = styled.header`

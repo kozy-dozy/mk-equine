@@ -82,8 +82,8 @@ const MenuItem = forwardRef<HTMLElement, MenuItemProps>((props, ref) => {
 
     return (
         <StyledMenuItem
-            as={Component}
             ref={ref as React.Ref<HTMLDivElement>}
+            as={Component}
             className={className}
             $variant={variant}
             $disabled={!!disabled}

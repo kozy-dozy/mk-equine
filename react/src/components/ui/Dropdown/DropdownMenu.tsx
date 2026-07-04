@@ -1,5 +1,5 @@
-import { forwardRef, useContext } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { forwardRef, useContext } from 'react'
 import styled from 'styled-components'
 
 import MenuContext from './context/menuContext'

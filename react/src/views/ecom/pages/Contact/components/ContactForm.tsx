@@ -213,7 +213,7 @@ export default function ContactForm({
 
                     <FooterRow>
                         <FooterNote>
-                            We'll respond within 1 business day.
+                            We&apos;ll respond within 1 business day.
                         </FooterNote>
 
                         <FormButton type="submit" disabled={isSubmitting}>

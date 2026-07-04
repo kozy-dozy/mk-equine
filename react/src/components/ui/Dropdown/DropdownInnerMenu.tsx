@@ -70,7 +70,7 @@ const Menu = forwardRef<HTMLElement, DropdownInnerMenuProps>((props, ref) => {
                 <AnimatePresence mode="wait">
                     {!hidden && (
                         <motion.ul
-                            // @ts-ignore – framer-motion ref type mismatch
+                            // @ts-expect-error – framer-motion ref type mismatch
                             ref={menuRef as Ref<HTMLUListElement>}
                             id={menuId}
                             initial={initialStyle}

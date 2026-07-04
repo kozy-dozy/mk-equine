@@ -6,8 +6,8 @@ import NavToggle from '@/components/shared/NavToggle'
 import Drawer from '@/components/ui/Drawer'
 import { DIR_RTL } from '@/constants/theme.constant'
 import { useAppSelector } from '@/store'
-import useAuth from '@/utils/hooks/useAuth'
 import withHeaderItem, { WithHeaderItemProps } from '@/utils/hoc/withHeaderItem'
+import useAuth from '@/utils/hooks/useAuth'
 import useResponsive from '@/utils/hooks/useResponsive'
 
 const EcomMenuContent = lazy(() => import('./EcomMenuContent'))

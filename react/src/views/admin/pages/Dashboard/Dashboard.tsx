@@ -7,7 +7,9 @@ import Card from '@/components/ui/Card'
 import Segment from '@/components/ui/Segment'
 import { COLORS } from '@/constants/chart.constant'
 import { useAppSelector } from '@/store'
+
 import type { AdminOverviewResponse } from '@/services/admin/AdminService'
+
 const ChartHeader = styled.div`
     display: flex;
     flex-direction: column;

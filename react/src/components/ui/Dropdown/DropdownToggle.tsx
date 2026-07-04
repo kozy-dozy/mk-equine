@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import { forwardRef } from 'react'
 import {
     HiChevronDown,
@@ -6,6 +5,7 @@ import {
     HiChevronRight,
     HiChevronLeft,
 } from 'react-icons/hi'
+import styled from 'styled-components'
 
 import type { CommonProps } from '../@types/common'
 import type { DropdownPlacement } from '../@types/placement'
@@ -103,11 +103,11 @@ const DropdownToggle = forwardRef<HTMLButtonElement, DropdownToggleProps>(
         if (renderTitle) {
             return (
                 <StyledDropdownToggle
-                    type="button"
                     ref={ref}
+                    $renderTitle
+                    type="button"
                     $disabled={disabled}
                     disabled={disabled}
-                    $renderTitle
                     {...rest}
                 >
                     {renderTitle}

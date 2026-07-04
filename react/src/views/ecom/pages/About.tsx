@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 import { COMPANY_CONFIG } from '@/config/company.config'
 import { SITE_IMAGES } from '@/config/site-images'
-import SEO from '@/views/ecom/components/SEO'
 import {
     bp,
     Button,
@@ -13,6 +12,7 @@ import {
     Section,
     SectionHeader,
 } from '@/views/ecom/components/marketing/primitives'
+import SEO from '@/views/ecom/components/SEO'
 
 /* ── Story ── */
 

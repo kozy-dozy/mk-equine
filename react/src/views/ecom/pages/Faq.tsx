@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-import SEO from '@/views/ecom/components/SEO'
 import FaqAccordion, { type QA } from '@/views/ecom/components/marketing/FaqAccordion'
 import {
     Button,
@@ -9,6 +8,7 @@ import {
     PageHero,
     Section,
 } from '@/views/ecom/components/marketing/primitives'
+import SEO from '@/views/ecom/components/SEO'
 
 type Group = { title: string; items: QA[] }
 

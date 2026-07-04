@@ -418,16 +418,16 @@ export default function AdminHorsesPage() {
                         Name
                         <Input
                             value={form.name}
-                            onChange={(e) => set('name', e.target.value)}
                             placeholder="e.g. Cisco"
+                            onChange={(e) => set('name', e.target.value)}
                         />
                     </Field>
                     <Field>
                         Discipline
                         <Input
                             value={form.discipline}
-                            onChange={(e) => set('discipline', e.target.value)}
                             placeholder="e.g. Ranch & Trail"
+                            onChange={(e) => set('discipline', e.target.value)}
                         />
                     </Field>
 
@@ -435,16 +435,16 @@ export default function AdminHorsesPage() {
                         Breed
                         <Input
                             value={form.breed}
-                            onChange={(e) => set('breed', e.target.value)}
                             placeholder="e.g. Quarter Horse"
+                            onChange={(e) => set('breed', e.target.value)}
                         />
                     </Field>
                     <Field>
                         Sex
                         <Input
                             value={form.sex}
-                            onChange={(e) => set('sex', e.target.value)}
                             placeholder="e.g. Gelding"
+                            onChange={(e) => set('sex', e.target.value)}
                         />
                     </Field>
 
@@ -497,15 +497,15 @@ export default function AdminHorsesPage() {
                         Description
                         <Textarea
                             value={form.description}
+                            placeholder="A short, friendly description of this horse."
                             onChange={(e) =>
                                 set('description', e.target.value)
                             }
-                            placeholder="A short, friendly description of this horse."
                         />
                     </Field>
 
                     <DialogActions>
-                        <Button onClick={() => setOpen(false)} disabled={saving}>
+                        <Button disabled={saving} onClick={() => setOpen(false)}>
                             Cancel
                         </Button>
                         <Button

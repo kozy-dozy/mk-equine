@@ -1,5 +1,6 @@
 // controllers/siteContent.ts
 import { Request, Response } from 'express'
+
 import SiteContent from './siteContent.model'
 
 function ensure4Categories(home: any) {

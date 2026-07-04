@@ -2,7 +2,6 @@ import { HiOutlineUser } from 'react-icons/hi'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import type { JSX } from 'react'
 
 import Avatar from '@/components/ui/Avatar'
 import Dropdown from '@/components/ui/Dropdown'
@@ -10,6 +9,8 @@ import { useMember } from '@/store/domainHooks'
 import { trackEvent } from '@/utils/analytics/googleAnalytics'
 import withHeaderItem from '@/utils/hoc/withHeaderItem'
 import useAuth from '@/utils/hooks/useAuth'
+
+import type { JSX } from 'react'
 
 
 type DropdownList = {

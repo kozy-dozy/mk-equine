@@ -1,9 +1,7 @@
-import type { ReactNode } from 'react'
 import styled from 'styled-components'
 
 import { SITE_IMAGES } from '@/config/site-images'
 import { trackEvent } from '@/utils/analytics/googleAnalytics'
-import SEO from '@/views/ecom/components/SEO'
 import {
     bp,
     Button,
@@ -13,6 +11,9 @@ import {
     PageHero,
     Section,
 } from '@/views/ecom/components/marketing/primitives'
+import SEO from '@/views/ecom/components/SEO'
+
+import type { ReactNode } from 'react'
 
 type Lesson = {
     title: string

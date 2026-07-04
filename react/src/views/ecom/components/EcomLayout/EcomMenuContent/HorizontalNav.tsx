@@ -13,9 +13,9 @@ export default function HorizontalNav() {
         <>
             {larger.md && (
                 <EcomMenuContent
+                    darkBg
                     manuVariant={mode}
                     userAuthority={userAuthority}
-                    darkBg
                 />
             )}
         </>

@@ -1,5 +1,6 @@
-import styled, { css } from 'styled-components'
 import { useRef, useState, useEffect } from 'react'
+import styled, { css } from 'styled-components'
+
 import type { CommonProps } from '@/@types/common'
 import type { HTMLAttributes } from 'react'
 

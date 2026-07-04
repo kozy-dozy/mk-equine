@@ -1,5 +1,5 @@
-import { Container, Section, SectionHeader } from '../primitives'
 import FaqAccordion, { type QA } from '../FaqAccordion'
+import { Container, Section, SectionHeader } from '../primitives'
 
 const FAQS: QA[] = [
     {

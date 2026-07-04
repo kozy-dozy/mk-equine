@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import dayjs from 'dayjs'
 import { Form, Formik } from 'formik'
 import {
@@ -6,6 +5,7 @@ import {
     HiOutlineDeviceMobile,
     HiOutlineDeviceTablet,
 } from 'react-icons/hi'
+import styled from 'styled-components'
 import * as Yup from 'yup'
 
 import { PasswordField } from '@/components/FormElements'

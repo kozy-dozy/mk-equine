@@ -1,14 +1,10 @@
 import { useEffect, useState } from 'react'
-import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { SITE_IMAGES } from '@/config/site-images'
 import { apiListHorses } from '@/services/shared/HorseService'
 import { trackEvent } from '@/utils/analytics/googleAnalytics'
-import SEO from '@/views/ecom/components/SEO'
-
-import type { HorseDto } from '@shared/dtos'
 import {
     bp,
     Button,
@@ -19,6 +15,10 @@ import {
     Section,
     SectionHeader,
 } from '@/views/ecom/components/marketing/primitives'
+import SEO from '@/views/ecom/components/SEO'
+
+import type { HorseDto } from '@shared/dtos'
+import type { ReactNode } from 'react'
 
 /* ----------------------------------------------------------- Training ── */
 
@@ -428,7 +428,7 @@ export default function HorsesPage() {
             </Section>
 
             {/* Sales */}
-            <Section id="for-sale" $alt>
+            <Section $alt id="for-sale">
                 <Container>
                     <SectionHeader
                         center
@@ -439,7 +439,8 @@ export default function HorsesPage() {
 
                     {!loading && horses.length === 0 ? (
                         <EmptyState>
-                            New horses are coming soon. Reach out and I'll let you
+                            New horses are coming soon. Reach out and I&apos;ll let
+                            you
                             know as soon as one becomes available.
                         </EmptyState>
                     ) : (
@@ -503,9 +504,10 @@ export default function HorsesPage() {
             <Section>
                 <Container>
                     <Closing>
-                        <Eyebrow>Let's Talk Horses</Eyebrow>
+                        <Eyebrow>Let&apos;s Talk Horses</Eyebrow>
                         <ClosingTitle>
-                            Looking for training or your next horse? I'd love to
+                            Looking for training or your next horse? I&apos;d love
+                            to
                             help.
                         </ClosingTitle>
                         <Button

@@ -1,4 +1,5 @@
 import { useTheme } from 'styled-components'
+
 import type { SportsTheme } from '@/styles/theme'
 
 function useThemeClass() {

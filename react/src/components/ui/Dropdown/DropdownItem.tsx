@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import isNil from 'lodash/isNil'
 import {
     useContext,
@@ -10,6 +9,7 @@ import {
     cloneElement,
 } from 'react'
 import { HiChevronRight, HiChevronLeft } from 'react-icons/hi'
+import styled from 'styled-components'
 
 import { useConfig } from '../ConfigProvider'
 import useUncertainRef from '../hooks/useUncertainRef'
@@ -76,7 +76,7 @@ const { DEFAULT, DIVIDER, HEADER, CUSTOM } = DROPDOWN_ITEM_TYPE
 const DropdownItem = forwardRef<HTMLElement, DropdownItemProps>(
     (props, ref) => {
         const {
-            asElement: Component = 'li',
+            asElement: _asElement = 'li',
             children,
             active: activeProp,
             disabled,

@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+
 import FeatureFlags from './featureFlags.model'
 
 import type { FeatureFlagsDto } from '@shared/dtos'

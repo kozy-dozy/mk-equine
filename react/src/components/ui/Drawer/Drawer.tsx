@@ -1,7 +1,9 @@
-import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import Modal from 'react-modal'
+import styled from 'styled-components'
+
 import CloseButton from '../CloseButton'
+
 import type { MouseEvent, ReactNode } from 'react'
 import type ReactModal from 'react-modal'
 

@@ -1,10 +1,11 @@
-import styled from 'styled-components'
 import {
     HiCheckCircle,
     HiInformationCircle,
     HiExclamation,
     HiXCircle,
 } from 'react-icons/hi'
+import styled from 'styled-components'
+
 import type { TypeAttributes, CommonProps } from '../@types/common'
 import type { ReactNode, JSX } from 'react'
 

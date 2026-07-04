@@ -1,14 +1,14 @@
 import { COMPANY_CONFIG } from '@/config/company.config'
-import SEO from '@/views/ecom/components/SEO'
+import AboutInstructor from '@/views/ecom/components/marketing/sections/AboutInstructor'
+import ContactCta from '@/views/ecom/components/marketing/sections/ContactCta'
+import Faq from '@/views/ecom/components/marketing/sections/Faq'
+import GalleryPreview from '@/views/ecom/components/marketing/sections/GalleryPreview'
 import Hero from '@/views/ecom/components/marketing/sections/Hero'
 import LessonOptions from '@/views/ecom/components/marketing/sections/LessonOptions'
-import AboutInstructor from '@/views/ecom/components/marketing/sections/AboutInstructor'
-import WhatStudentsLearn from '@/views/ecom/components/marketing/sections/WhatStudentsLearn'
-import TrainingSales from '@/views/ecom/components/marketing/sections/TrainingSales'
-import GalleryPreview from '@/views/ecom/components/marketing/sections/GalleryPreview'
 import Testimonials from '@/views/ecom/components/marketing/sections/Testimonials'
-import Faq from '@/views/ecom/components/marketing/sections/Faq'
-import ContactCta from '@/views/ecom/components/marketing/sections/ContactCta'
+import TrainingSales from '@/views/ecom/components/marketing/sections/TrainingSales'
+import WhatStudentsLearn from '@/views/ecom/components/marketing/sections/WhatStudentsLearn'
+import SEO from '@/views/ecom/components/SEO'
 
 export default function Home() {
     return (

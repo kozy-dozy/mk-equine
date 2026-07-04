@@ -1,5 +1,6 @@
-import styled from 'styled-components'
 import { HiOutlineMenuAlt2, HiOutlineMenu } from 'react-icons/hi'
+import styled from 'styled-components'
+
 import type { CommonProps } from '@/@types/common'
 
 export interface NavToggleProps extends CommonProps {

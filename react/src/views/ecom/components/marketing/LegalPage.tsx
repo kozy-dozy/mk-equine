@@ -1,8 +1,9 @@
-import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Container, PageHero, Section } from './primitives'
+
+import type { ReactNode } from 'react'
 
 const Prose = styled.div`
     max-width: 760px;

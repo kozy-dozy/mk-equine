@@ -1,4 +1,5 @@
 import styled, { useTheme } from 'styled-components'
+
 import Logo from '@/components/template/Logo'
 import ScrollBar from '@/components/ui/ScrollBar'
 import adminNavigationConfig from '@/configs/navigation/admin'

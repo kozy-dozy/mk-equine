@@ -4,6 +4,7 @@ import { useCallback, useMemo, useState } from 'react'
 import { HiOutlineUser } from 'react-icons/hi'
 import styled from 'styled-components'
 import * as Yup from 'yup'
+
 import {
     FileUploadField,
     PasswordField,
@@ -17,10 +18,10 @@ import toast from '@/components/ui/toast'
 import { apiUpdateMyPassword } from '@/services/shared/AccountService'
 import { apiGetMemberAvatarUploadUrl } from '@/services/shared/S3Service'
 import { setUser, useAppDispatch } from '@/store'
-import { trackEvent } from '@/utils/analytics/googleAnalytics'
-import { yupFields } from '@/utils/validation/yupValidation'
 import { useMember } from '@/store/domainHooks'
+import { trackEvent } from '@/utils/analytics/googleAnalytics'
 import { getExtensionFromFile } from '@/utils/fileUpload'
+import { yupFields } from '@/utils/validation/yupValidation'
 
 
 type SettingsFormValues = {

@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+
 import { sendEmailTemplate } from '../../services/mailer'
 
 const norm = (s: unknown) => String(s ?? '').trim()

@@ -1,5 +1,6 @@
 import bcrypt from 'bcryptjs'
 import { Request, Response } from 'express'
+
 import { sanitizeRegexInput } from '../../utils/validators'
 
 import Member from './members.model'

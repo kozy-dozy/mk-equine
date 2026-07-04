@@ -383,7 +383,8 @@ export default function Availability() {
             <Panel>
                 <SubTitle>Weekly Schedule</SubTitle>
                 <Lede>
-                    Set the recurring hours you're available for lessons. Times
+                    Set the recurring hours you&apos;re available for lessons.
+                    Times
                     are in {TZ_LABEL}.
                 </Lede>
 
@@ -454,7 +455,7 @@ export default function Availability() {
             <Panel>
                 <SubTitle>Blocked Time</SubTitle>
                 <Lede>
-                    Block specific dates or time ranges when you can't teach
+                    Block specific dates or time ranges when you can&apos;t teach
                     (shows, travel, appointments, etc.). Use your local timezone
                     in the date picker — it will be interpreted in {TZ_LABEL}.
                 </Lede>

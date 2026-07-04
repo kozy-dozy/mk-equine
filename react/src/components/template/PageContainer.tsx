@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import { Suspense } from 'react'
+import styled from 'styled-components'
 
 import Container from '@/components/shared/Container'
 import Footer from '@/components/template/Footer'

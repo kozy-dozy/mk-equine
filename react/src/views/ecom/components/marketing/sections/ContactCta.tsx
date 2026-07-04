@@ -79,7 +79,7 @@ export default function ContactCta() {
                 </Text>
                 <Actions>
                     <Button to="/book-lesson">Book a Lesson</Button>
-                    <OutlineButton to="/about" $onDark>
+                    <OutlineButton $onDark to="/about">
                         Meet Your Instructor
                     </OutlineButton>
                 </Actions>

@@ -1,7 +1,8 @@
-import type { ReactNode } from 'react'
 import styled from 'styled-components'
 
 import { bp, Container, Section, SectionHeader } from '../primitives'
+
+import type { ReactNode } from 'react'
 
 /* ----------------------------------------------------------- line icons */
 

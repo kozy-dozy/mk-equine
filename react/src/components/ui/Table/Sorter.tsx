@@ -1,6 +1,5 @@
 import { FaSort, FaSortUp, FaSortDown } from 'react-icons/fa'
-import styled from 'styled-components'
-import { useTheme } from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 
 import type { SportsTheme } from '@/styles/theme'
 

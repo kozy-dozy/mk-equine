@@ -39,22 +39,29 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'react/prop-types': 'off',
 
-        // Pre-existing violations across the codebase (unrelated to the
-        // jsx-a11y work); downgraded error->warn so `yarn lint` exits 0.
-        // jsx-a11y rules remain at their recommended (error) severity.
-        'react/no-unescaped-entities': 'warn',
-        '@typescript-eslint/no-unused-vars': 'warn',
-        '@typescript-eslint/ban-ts-comment': 'warn',
+        // Keep this rule at full error strictness. `ignoreRestSiblings`
+        // allows the common "destructure a prop only to strip it from
+        // `...rest`" pattern (renaming to `_` would change what spreads
+        // onto the DOM element). `_`-prefixed args/vars are opt-out.
+        '@typescript-eslint/no-unused-vars': [
+            'error',
+            {
+                ignoreRestSiblings: true,
+                argsIgnorePattern: '^_',
+                varsIgnorePattern: '^_',
+                caughtErrorsIgnorePattern: '^_',
+            },
+        ],
 
         'import/first': 'warn',
         'import/default': 'off',
         'import/newline-after-import': 'warn',
         'import/no-named-as-default-member': 'off',
         'import/no-named-as-default': 'off',
-        'import/no-duplicates': 'warn',
+        'import/no-duplicates': 'error',
 
         'import/order': [
-            'warn',
+            'error',
             {
                 groups: [
                     'builtin',

@@ -1,8 +1,10 @@
-import styled, { css } from 'styled-components'
 import { forwardRef } from 'react'
+import styled, { css } from 'styled-components'
+
 import { useConfig } from '../ConfigProvider'
 import { useForm } from '../Form/context'
 import { useInputGroup } from '../InputGroup/context'
+
 import type { CommonProps, TypeAttributes } from '../@types/common'
 
 export interface AddonProps extends CommonProps {

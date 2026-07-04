@@ -5,13 +5,13 @@ import { COMPANY_CONFIG } from '@/config/company.config'
 import { SITE_IMAGES } from '@/config/site-images'
 import { useMember } from '@/store/domainHooks'
 import useAuth from '@/utils/hooks/useAuth'
-import SEO from '@/views/ecom/components/SEO'
 import {
     bp,
     Container,
     PageHero,
     Section,
 } from '@/views/ecom/components/marketing/primitives'
+import SEO from '@/views/ecom/components/SEO'
 
 import ContactForm from './components/ContactForm'
 
@@ -253,7 +253,8 @@ export default function ContactPage() {
                             <CardTitle>Send a Message</CardTitle>
                             <CardLead>
                                 Tell me a little about you or your rider, and what
-                                you're hoping to learn. Spots are limited, so don't
+                                you&apos;re hoping to learn. Spots are limited, so
+                                don&apos;t
                                 wait too long!
                             </CardLead>
                             <ContactForm

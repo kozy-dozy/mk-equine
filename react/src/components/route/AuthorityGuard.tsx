@@ -22,7 +22,7 @@ const AuthorityGuard = (props: AuthorityGuardProps) => {
     }
 
     if (!roleMatched) {
-        return <Navigate to="/" replace />
+        return <Navigate replace to="/" />
     }
 
     // If children are provided, render them. Otherwise render Outlet for nested routes

@@ -2,6 +2,7 @@ import { forwardRef } from 'react'
 import styled from 'styled-components'
 
 import useControllableState from '../hooks/useControllableState'
+
 import { TabsContextProvider } from './context'
 
 import type { TabsVariant, TabsValue } from './context'

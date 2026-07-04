@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import { SITE_IMAGES } from '@/config/site-images'
-import SEO from '@/views/ecom/components/SEO'
 import {
     bp,
     Button,
@@ -10,6 +9,7 @@ import {
     PageHero,
     Section,
 } from '@/views/ecom/components/marketing/primitives'
+import SEO from '@/views/ecom/components/SEO'
 
 const CAPTIONS = [
     'Morning in the arena',

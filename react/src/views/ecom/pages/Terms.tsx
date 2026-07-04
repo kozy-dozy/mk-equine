@@ -1,5 +1,4 @@
 import { COMPANY_CONFIG } from '@/config/company.config'
-import SEO from '@/views/ecom/components/SEO'
 import {
     LegalEmail,
     LegalLink,
@@ -9,6 +8,7 @@ import {
     LegalParagraph,
     LegalSection,
 } from '@/views/ecom/components/marketing/LegalPage'
+import SEO from '@/views/ecom/components/SEO'
 
 const EMAIL = COMPANY_CONFIG.contact.email
 
