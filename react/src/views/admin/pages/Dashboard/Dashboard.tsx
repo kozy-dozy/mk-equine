@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-import Chart from '@/components/shared/Chart'
-import Loading from '@/components/shared/Loading'
-import Card from '@/components/ui/Card'
-import Segment from '@/components/ui/Segment'
+import Chart from '@kozydozy/shared/Chart'
+import Loading from '@kozydozy/shared/Loading'
+import Card from '@kozydozy/ui/Card'
+import Segment from '@kozydozy/ui/Segment'
 import { COLORS } from '@/constants/chart.constant'
 import { useAppSelector } from '@/store'
 

@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import DataTable from '@/components/shared/DataTable'
-import Avatar from '@/components/ui/Avatar'
-import Badge from '@/components/ui/Badge'
+import Avatar from '@kozydozy/ui/Avatar'
+import Badge from '@kozydozy/ui/Badge'
 import { useAppDispatch, useAppSelector } from '@/store'
 import {
     setTableData,
@@ -14,7 +14,7 @@ import {
     toggleDeleteConfirmation,
     setSelectedMember,
 } from '@/store/slices/admin/membersSlice'
-import useThemeClass from '@/utils/hooks/useThemeClass'
+import useThemeClass from '@kozydozy/foundation/hooks/useThemeClass'
 
 import MemberDeleteConfirmation from './MemberDeleteConfirmation'
 
@@ -237,8 +237,8 @@ const MembersTable = () => {
                 ref={tableRef}
                 columns={columns}
                 data={data}
-                mkEquineAvatarColumns={[0]}
-                mkEquineAvatarProps={{ style: { borderRadius: 6 } }}
+                avatarColumns={[0]}
+                avatarProps={{ style: { borderRadius: 6 } }}
                 loading={loading}
                 pagingData={{
                     total: tableData.total as number,

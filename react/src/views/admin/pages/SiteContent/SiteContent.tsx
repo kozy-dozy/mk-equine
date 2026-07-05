@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { Card } from '@/components/ui'
-import Button from '@/components/ui/Button'
-import Tag from '@/components/ui/Tag'
+import { Card } from '@kozydozy/ui'
+import Button from '@kozydozy/ui/Button'
+import Tag from '@kozydozy/ui/Tag'
 import {
     apiGetSiteContentAdmin,
     type SiteContentHome,

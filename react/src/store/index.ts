@@ -1,10 +1,9 @@
 import store from './storeSetup'
 
 export * from './storeSetup'
-export * from './slices/auth'
-export * from './slices/base'
-export * from './slices/theme/themeSlice'
-export * from './slices/locale/localeSlice'
+// auth / base / theme / locale slice actions + state types now come from
+// @kozydozy/foundation (the slices are composed via `foundationReducers`).
+export * from '@kozydozy/foundation'
 export * from './rootReducer'
 export * from './hooks'
 export default store

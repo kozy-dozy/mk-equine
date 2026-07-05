@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 import { Direction, NavMode } from '@/@types/theme'
-import AuthorityCheck from '@/components/shared/AuthorityCheck'
-import Menu from '@/components/ui/Menu'
-import { themeConfig } from '@/configs/theme.config'
+import AuthorityCheck from '@kozydozy/shared/AuthorityCheck'
+import Menu from '@kozydozy/ui/Menu'
+import { themeConfig } from '@kozydozy/foundation/config/theme.config'
 import {
     NAV_ITEM_TYPE_TITLE,
     NAV_ITEM_TYPE_COLLAPSE,

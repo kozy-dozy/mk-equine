@@ -1,6 +1,6 @@
-import ConfirmDialog from '@/components/shared/ConfirmDialog'
-import Notification from '@/components/ui/Notification'
-import toast from '@/components/ui/toast'
+import ConfirmDialog from '@kozydozy/shared/ConfirmDialog'
+import Notification from '@kozydozy/ui/Notification'
+import toast from '@kozydozy/ui/toast'
 import { useAppDispatch, useAppSelector } from '@/store'
 import {
     toggleDeleteConfirmation,

@@ -3,9 +3,9 @@ import { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import styled, { useTheme } from 'styled-components'
 
-import Avatar from '@/components/ui/Avatar'
-import Badge from '@/components/ui/Badge'
-import Button from '@/components/ui/Button'
+import Avatar from '@kozydozy/ui/Avatar'
+import Badge from '@kozydozy/ui/Badge'
+import Button from '@kozydozy/ui/Button'
 import { useAppDispatch, useAppSelector } from '@/store'
 import { getMemberById } from '@/store/slices/admin/membersSlice'
 

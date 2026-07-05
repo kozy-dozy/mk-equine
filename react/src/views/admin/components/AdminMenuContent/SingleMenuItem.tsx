@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import AuthorityCheck from '@/components/shared/AuthorityCheck'
-import Menu from '@/components/ui/Menu'
-import Tooltip from '@/components/ui/Tooltip'
+import AuthorityCheck from '@kozydozy/shared/AuthorityCheck'
+import Menu from '@kozydozy/ui/Menu'
+import Tooltip from '@kozydozy/ui/Tooltip'
 
 import MenuIcon from './MenuIcon'
 

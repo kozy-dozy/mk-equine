@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import appConfig from '@/configs/app.config'
+import appConfig from '@kozydozy/foundation/config/app.config'
 
 import SignInForm from '../SignIn/SignInForm'
 

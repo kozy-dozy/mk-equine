@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
-import Button from '@/components/ui/Button'
-import Dialog from '@/components/ui/Dialog'
-import Notification from '@/components/ui/Notification'
-import toast from '@/components/ui/toast'
-import Upload from '@/components/ui/Upload'
+import Button from '@kozydozy/ui/Button'
+import Dialog from '@kozydozy/ui/Dialog'
+import Notification from '@kozydozy/ui/Notification'
+import toast from '@kozydozy/ui/toast'
+import Upload from '@kozydozy/ui/Upload'
 import {
     apiCreateHorse,
     apiDeleteHorse,

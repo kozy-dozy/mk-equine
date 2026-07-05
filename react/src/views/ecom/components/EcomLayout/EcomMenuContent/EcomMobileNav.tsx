@@ -2,13 +2,13 @@ import { useState, Suspense, lazy } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import NavToggle from '@/components/shared/NavToggle'
-import Drawer from '@/components/ui/Drawer'
-import { DIR_RTL } from '@/constants/theme.constant'
+import NavToggle from '@kozydozy/shared/NavToggle'
+import Drawer from '@kozydozy/ui/Drawer'
+import { DIR_RTL } from '@kozydozy/foundation/constants/theme.constant'
 import { useAppSelector } from '@/store'
-import withHeaderItem, { WithHeaderItemProps } from '@/utils/hoc/withHeaderItem'
+import withHeaderItem, { WithHeaderItemProps } from '@kozydozy/foundation/hoc/withHeaderItem'
 import useAuth from '@/utils/hooks/useAuth'
-import useResponsive from '@/utils/hooks/useResponsive'
+import useResponsive from '@kozydozy/foundation/hooks/useResponsive'
 
 const EcomMenuContent = lazy(() => import('./EcomMenuContent'))
 

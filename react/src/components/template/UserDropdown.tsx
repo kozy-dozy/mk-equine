@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 
-import Avatar from '@/components/ui/Avatar'
-import Dropdown from '@/components/ui/Dropdown'
+import Avatar from '@kozydozy/ui/Avatar'
+import Dropdown from '@kozydozy/ui/Dropdown'
 import { useMember } from '@/store/domainHooks'
 import { trackEvent } from '@/utils/analytics/googleAnalytics'
-import withHeaderItem from '@/utils/hoc/withHeaderItem'
+import withHeaderItem from '@kozydozy/foundation/hoc/withHeaderItem'
 import useAuth from '@/utils/hooks/useAuth'
 
 import type { JSX } from 'react'

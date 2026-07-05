@@ -1,27 +1,25 @@
 import { combineReducers, Action, Reducer } from 'redux'
 
+import {
+    foundationReducers,
+    type FoundationState,
+} from '@kozydozy/foundation'
+
 import adminDashboard, {
     AdminDashboardState,
 } from './slices/admin/dashboardSlice'
 import memberList, { MemberListState } from './slices/admin/membersSlice'
-import auth, { AuthState } from './slices/auth'
-import base, { BaseState } from './slices/base'
 import featureFlags, {
     FeatureFlagsState,
 } from './slices/domain/featureFlagsSlice'
 import member, { MemberState } from './slices/domain/memberSlice'
-import locale, { LocaleState } from './slices/locale/localeSlice'
-import theme, { ThemeState } from './slices/theme/themeSlice'
 
-// Admin slices
-
-export type RootState = {
-    auth: AuthState
-    base: BaseState
+// The auth / base / locale / theme slices now come from @kozydozy/foundation
+// (composed via `foundationReducers`). Only MK Equine's domain/admin slices are
+// declared here.
+export type RootState = FoundationState & {
     featureFlags: FeatureFlagsState
     member: MemberState
-    locale: LocaleState
-    theme: ThemeState
     // Admin
     adminDashboard: AdminDashboardState
     memberList: MemberListState
@@ -32,12 +30,9 @@ export interface AsyncReducers {
 }
 
 const staticReducers = {
-    auth,
-    base,
+    ...foundationReducers,
     featureFlags,
     member,
-    locale,
-    theme,
     // Admin
     adminDashboard,
     memberList,

@@ -3,7 +3,7 @@ import debounce from 'lodash/debounce'
 import { useRef } from 'react'
 import { HiOutlineSearch } from 'react-icons/hi'
 
-import Input from '@/components/ui/Input'
+import Input from '@kozydozy/ui/Input'
 import { useAppDispatch, useAppSelector } from '@/store'
 import { getMembers, setTableData } from '@/store/slices/admin/membersSlice'
 

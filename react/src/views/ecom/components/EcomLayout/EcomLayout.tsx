@@ -5,9 +5,9 @@ import styled from 'styled-components'
 import Footer from '@/components/template/Footer'
 import Header from '@/components/template/Header'
 import HeaderLogo from '@/components/template/HeaderLogo'
-import ModeSwitcher from '@/components/template/ThemeConfigurator/ModeSwitcher'
+import ModeSwitcher from '@kozydozy/layout/ModeSwitcher'
 import UserDropdown from '@/components/template/UserDropdown'
-import Dialog from '@/components/ui/Dialog'
+import Dialog from '@kozydozy/ui/Dialog'
 import { useFeatureFlags } from '@/store/domainHooks'
 import { trackEvent } from '@/utils/analytics/googleAnalytics'
 import useAuth from '@/utils/hooks/useAuth'
@@ -198,7 +198,14 @@ const HeaderActionsEnd = () => {
 
             {flags.darkModeEnabled && (
                 <DarkModeWrap>
-                    <ModeSwitcher />
+                    <ModeSwitcher
+                        onToggle={(mode) =>
+                            trackEvent('toggle_theme', {
+                                to: mode,
+                                location: 'header',
+                            })
+                        }
+                    />
                 </DarkModeWrap>
             )}
         </HeaderEnd>

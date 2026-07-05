@@ -1,9 +1,14 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
+import { createTheme, GlobalStyle } from '@kozydozy/theme'
+import { mkEquineTokens } from '@kozydozy/tokens'
+
 import { useAppSelector } from '@/store'
-import GlobalStyle from '@/styles/GlobalStyle'
-import { lightTheme, darkTheme } from '@/styles/theme'
+
+// Built once from the MK Equine token preset; reproduces the previous
+// light/dark themes exactly (same palette) plus `components` for shared UI.
+const themes = createTheme(mkEquineTokens)
 
 interface StyledThemeProviderProps {
     children: React.ReactNode
@@ -15,7 +20,7 @@ interface StyledThemeProviderProps {
  */
 export function StyledThemeProvider({ children }: StyledThemeProviderProps) {
     const mode = useAppSelector((state) => state.theme.mode)
-    const theme = mode === 'dark' ? darkTheme : lightTheme
+    const theme = mode === 'dark' ? themes.dark : themes.light
 
     return (
         <ThemeProvider theme={theme}>

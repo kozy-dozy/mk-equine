@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
-import { Card } from '@/components/ui'
-import Button from '@/components/ui/Button'
-import Switcher from '@/components/ui/Switcher/Switcher'
+import { Card } from '@kozydozy/ui'
+import Button from '@kozydozy/ui/Button'
+import Switcher from '@kozydozy/ui/Switcher/Switcher'
 import {
     apiGetAdminFeatureFlags,
     apiPatchAdminFeatureFlags,

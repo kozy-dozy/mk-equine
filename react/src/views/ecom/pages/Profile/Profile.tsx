@@ -2,9 +2,9 @@ import React, { Suspense, useMemo } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { Loading } from '@/components/shared'
-import { Card } from '@/components/ui'
-import Tabs from '@/components/ui/Tabs'
+import { Loading } from '@kozydozy/shared'
+import { Card } from '@kozydozy/ui'
+import Tabs from '@kozydozy/ui/Tabs'
 import SEO from '@/views/ecom/components/SEO'
 
 const { TabNav, TabList, TabContent } = Tabs

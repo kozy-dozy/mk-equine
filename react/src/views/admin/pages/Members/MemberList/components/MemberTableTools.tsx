@@ -2,7 +2,7 @@ import { HiDownload } from 'react-icons/hi'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import Button from '@/components/ui/Button'
+import Button from '@kozydozy/ui/Button'
 
 import MemberTableSearch from './MemberTableSearch'
 
