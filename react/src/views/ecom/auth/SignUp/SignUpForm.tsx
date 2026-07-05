@@ -8,11 +8,11 @@ import {
     PasswordField,
     TextField,
     RecaptchaField,
-} from '@/components/FormElements'
-import ActionLink from '@/components/shared/ActionLink'
+} from '@kozydozy/forms'
+import ActionLink from '@kozydozy/shared/ActionLink'
 import FormButton from '@/components/shared/FormButton'
-import Alert from '@/components/ui/Alert'
-import { FormContainer } from '@/components/ui/Form'
+import Alert from '@kozydozy/ui/Alert'
+import { FormContainer } from '@kozydozy/ui/Form'
 import { INTEGRATIONS_CONFIG } from '@/config/integrations.config'
 import useAuth from '@/utils/hooks/useAuth'
 import { yupFields } from '@/utils/validation/yupValidation'

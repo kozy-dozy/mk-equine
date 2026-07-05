@@ -1,11 +1,11 @@
 import { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
-import ProtectedRoute from '@/components/route/ProtectedRoute'
-import PublicRoute from '@/components/route/PublicRoute'
-import PageTransition from '@/components/shared/PageTransition'
-import Theme from '@/components/template/Theme'
-import { ADMIN } from '@/constants/roles.constant'
+import ProtectedRoute from '@kozydozy/routing/ProtectedRoute'
+import PublicRoute from '@kozydozy/routing/PublicRoute'
+import PageTransition from '@kozydozy/shared/PageTransition'
+import Theme from '@kozydozy/layout/Theme'
+import { ADMIN } from '@kozydozy/foundation/constants/roles.constant'
 import { useAppSelector } from '@/store'
 import {
     useInitializeReduxState,
@@ -16,8 +16,8 @@ import AuthLayout from '@/views/ecom/components/AuthLayout'
 import EcomLayout from '@/views/ecom/components/EcomLayout/EcomLayout'
 import MarketingLayout from '@/views/ecom/components/marketing/MarketingLayout'
 
-import AuthorityGuard from './components/route/AuthorityGuard'
-import PageContainer from './components/template/PageContainer'
+import AuthorityGuard from '@kozydozy/routing/AuthorityGuard'
+import PageContainer from '@kozydozy/layout/PageContainer'
 import GoogleAnalytics from './views/ecom/components/GoogleAnalytics'
 
 // Ecom pages

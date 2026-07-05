@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import AuthorityCheck from '@/components/shared/AuthorityCheck'
+import AuthorityCheck from '@kozydozy/shared/AuthorityCheck'
 import navigationConfig from '@/configs/navigation/ecom'
 import { NAV_ITEM_TYPE_ITEM } from '@/constants/navigation.constant'
 

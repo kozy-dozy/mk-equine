@@ -9,12 +9,12 @@ import {
     FileUploadField,
     PasswordField,
     TextField,
-} from '@/components/FormElements'
-import { Avatar, Card } from '@/components/ui'
-import Button from '@/components/ui/Button'
-import { FormContainer } from '@/components/ui/Form'
-import Notification from '@/components/ui/Notification'
-import toast from '@/components/ui/toast'
+} from '@kozydozy/forms'
+import { Avatar, Card } from '@kozydozy/ui'
+import Button from '@kozydozy/ui/Button'
+import { FormContainer } from '@kozydozy/ui/Form'
+import Notification from '@kozydozy/ui/Notification'
+import toast from '@kozydozy/ui/toast'
 import { apiUpdateMyPassword } from '@/services/shared/AccountService'
 import { apiGetMemberAvatarUploadUrl } from '@/services/shared/S3Service'
 import { setUser, useAppDispatch } from '@/store'

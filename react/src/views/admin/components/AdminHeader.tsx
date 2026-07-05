@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
-import SideNavToggle from '@/components/template/SideNavToggle'
-import ModeSwitcher from '@/components/template/ThemeConfigurator/ModeSwitcher'
+import SideNavToggle from '@kozydozy/layout/SideNavToggle'
+import ModeSwitcher from '@kozydozy/layout/ModeSwitcher'
 import UserDropdown from '@/components/template/UserDropdown'
 import AdminMobileNav from '@/views/admin/components/AdminMenuContent/AdminMobileNav'
+import { trackEvent } from '@/utils/analytics/googleAnalytics'
 
 const HeaderEl = styled.header`
     position: sticky;
@@ -33,7 +34,14 @@ export default function AdminHeader() {
                 <SideNavToggle />
             </HeaderSide>
             <HeaderSide>
-                <ModeSwitcher />
+                <ModeSwitcher
+                    onToggle={(mode) =>
+                        trackEvent('toggle_theme', {
+                            to: mode,
+                            location: 'header',
+                        })
+                    }
+                />
                 <UserDropdown hoverable={false} />
             </HeaderSide>
         </HeaderEl>

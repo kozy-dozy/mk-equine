@@ -4,8 +4,8 @@ import { HiOutlineTrash } from 'react-icons/hi'
 import styled from 'styled-components'
 import * as Yup from 'yup'
 
-import { TextField } from '@/components/FormElements'
-import Button from '@/components/ui/Button'
+import { TextField } from '@kozydozy/forms'
+import Button from '@kozydozy/ui/Button'
 import {
     apiAdminCreateAvailabilityBlock,
     apiAdminDeleteAvailabilityBlock,

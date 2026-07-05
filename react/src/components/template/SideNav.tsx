@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import Logo from '@/components/template/Logo'
-import ScrollBar from '@/components/ui/ScrollBar'
+import ScrollBar from '@kozydozy/ui/ScrollBar'
 import adminNavigationConfig from '@/configs/navigation/admin'
 import {
     SIDE_NAV_WIDTH,
@@ -9,9 +9,9 @@ import {
     NAV_MODE_DARK,
     NAV_MODE_THEMED,
     NAV_MODE_TRANSPARENT,
-} from '@/constants/theme.constant'
+} from '@kozydozy/foundation/constants/theme.constant'
 import { useAppSelector } from '@/store'
-import useResponsive from '@/utils/hooks/useResponsive'
+import useResponsive from '@kozydozy/foundation/hooks/useResponsive'
 import AdminMenuContent from '@/views/admin/components/AdminMenuContent'
 
 const sideNavStyle = {

@@ -2,9 +2,9 @@ import { useState, useEffect, Suspense, lazy } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
-import AdaptableCard from '@/components/shared/AdaptableCard'
-import Container from '@/components/shared/Container'
-import Tabs from '@/components/ui/Tabs'
+import AdaptableCard from '@kozydozy/shared/AdaptableCard'
+import Container from '@kozydozy/shared/Container'
+import Tabs from '@kozydozy/ui/Tabs'
 
 const Profile = lazy(() => import('./components/Profile'))
 const Password = lazy(() => import('./components/Password'))

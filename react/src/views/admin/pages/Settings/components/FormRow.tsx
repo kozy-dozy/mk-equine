@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { FormItem } from '@/components/ui/Form'
+import { FormItem } from '@kozydozy/ui/Form'
 
 import type { FormikTouched, FormikErrors } from 'formik'
 import type { PropsWithChildren } from 'react'

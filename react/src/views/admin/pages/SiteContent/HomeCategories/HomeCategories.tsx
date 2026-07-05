@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 import styled from 'styled-components'
 
-import { Card } from '@/components/ui'
-import Button from '@/components/ui/Button'
-import Input from '@/components/ui/Input'
-import Notification from '@/components/ui/Notification'
-import toast from '@/components/ui/toast'
-import Upload from '@/components/ui/Upload'
+import { Card } from '@kozydozy/ui'
+import Button from '@kozydozy/ui/Button'
+import Input from '@kozydozy/ui/Input'
+import Notification from '@kozydozy/ui/Notification'
+import toast from '@kozydozy/ui/toast'
+import Upload from '@kozydozy/ui/Upload'
 import { apiGetSiteAssetUploadUrl } from '@/services/shared/S3Service'
 import {
     apiGetSiteContentAdmin,

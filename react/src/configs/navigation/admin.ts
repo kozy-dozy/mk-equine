@@ -2,7 +2,7 @@ import {
     NAV_ITEM_TYPE_ITEM,
     NAV_ITEM_TYPE_TITLE,
 } from '@/constants/navigation.constant'
-import { ADMIN } from '@/constants/roles.constant'
+import { ADMIN } from '@kozydozy/foundation/constants/roles.constant'
 
 import type { NavigationTree } from '@/@types/navigation'
 

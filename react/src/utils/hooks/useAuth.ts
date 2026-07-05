@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import appConfig from '@/configs/app.config'
+import appConfig from '@kozydozy/foundation/config/app.config'
 import { REDIRECT_URL_KEY } from '@/constants/app.constant'
 import {
     apiSignIn,

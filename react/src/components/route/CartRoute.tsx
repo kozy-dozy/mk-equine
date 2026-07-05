@@ -1,6 +1,6 @@
 import { Navigate } from 'react-router-dom'
 
-import Loading from '@/components/shared/Loading'
+import Loading from '@kozydozy/shared/Loading'
 import { useAppSelector } from '@/store'
 
 export default function CartRoute({ children }: { children: React.ReactNode }) {

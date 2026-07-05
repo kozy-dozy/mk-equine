@@ -1,13 +1,13 @@
 import { useState, Suspense, lazy } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 
-import NavToggle from '@/components/shared/NavToggle'
-import Drawer from '@/components/ui/Drawer'
+import NavToggle from '@kozydozy/shared/NavToggle'
+import Drawer from '@kozydozy/ui/Drawer'
 import adminNavigationConfig from '@/configs/navigation/admin'
-import { DIR_RTL } from '@/constants/theme.constant'
+import { DIR_RTL } from '@kozydozy/foundation/constants/theme.constant'
 import { useAppSelector } from '@/store'
-import withHeaderItem, { WithHeaderItemProps } from '@/utils/hoc/withHeaderItem'
-import useResponsive from '@/utils/hooks/useResponsive'
+import withHeaderItem, { WithHeaderItemProps } from '@kozydozy/foundation/hoc/withHeaderItem'
+import useResponsive from '@kozydozy/foundation/hooks/useResponsive'
 
 // Styled-component for Drawer body background
 const AdminMobileDrawerBodyStyle = createGlobalStyle`

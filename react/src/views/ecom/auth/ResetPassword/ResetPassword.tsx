@@ -1,4 +1,4 @@
-import appConfig from '@/configs/app.config'
+import appConfig from '@kozydozy/foundation/config/app.config'
 import ResetPasswordForm from '@/views/ecom/auth/ResetPassword/ResetPasswordForm'
 
 const { unAuthenticatedEntryPath } = appConfig

@@ -1,5 +1,5 @@
 import { useAppSelector } from '@/store'
-import useResponsive from '@/utils/hooks/useResponsive'
+import useResponsive from '@kozydozy/foundation/hooks/useResponsive'
 
 import EcomMenuContent from './EcomMenuContent'
 

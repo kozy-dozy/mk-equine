@@ -18,7 +18,25 @@
     "jsx": "react-jsx",
     "paths": {
         "@/*": ["./src/*"],
-        "@shared/*": ["../shared/*"]
+        "@shared/*": ["../shared/*"],
+        "@kozydozy/tokens": ["../../packages/tokens/src/index.ts"],
+        "@kozydozy/theme": ["../../packages/theme/src/index.ts"],
+        "@kozydozy/ui": ["../../packages/ui/src/index.ts"],
+        "@kozydozy/ui/*": ["../../packages/ui/src/*"],
+        "@kozydozy/forms": ["../../packages/forms/src/index.ts"],
+        "@kozydozy/forms/*": ["../../packages/forms/src/*"],
+        "@kozydozy/shared": ["../../packages/shared/src/index.ts"],
+        "@kozydozy/shared/*": ["../../packages/shared/src/*"],
+        "@kozydozy/foundation": ["../../packages/foundation/src/index.ts"],
+        "@kozydozy/foundation/*": ["../../packages/foundation/src/*"],
+        "@kozydozy/routing": ["../../packages/routing/src/index.ts"],
+        "@kozydozy/routing/*": ["../../packages/routing/src/*"],
+        "@kozydozy/layout": ["../../packages/layout/src/index.ts"],
+        "@kozydozy/layout/*": ["../../packages/layout/src/*"],
+        "styled-components": ["../node_modules/styled-components"],
+        "react-redux": ["../node_modules/react-redux"],
+        "@reduxjs/toolkit": ["../node_modules/@reduxjs/toolkit"],
+        "redux": ["../node_modules/redux"]
     }
   },
   "include": ["src"],

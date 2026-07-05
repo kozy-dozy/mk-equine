@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 
-import Dropdown from '@/components/ui/Dropdown'
+import Dropdown from '@kozydozy/ui/Dropdown'
 
 import EcomMenuNavLink from './EcomMenuNavLink'
 

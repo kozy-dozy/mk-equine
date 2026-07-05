@@ -20,16 +20,16 @@ import {
 } from 'react'
 import styled from 'styled-components'
 
-import Checkbox from '@/components/ui/Checkbox'
-import Pagination from '@/components/ui/Pagination'
-import Select from '@/components/ui/Select'
-import Table from '@/components/ui/Table'
+import Checkbox from '@kozydozy/ui/Checkbox'
+import Pagination from '@kozydozy/ui/Pagination'
+import Select from '@kozydozy/ui/Select'
+import Table from '@kozydozy/ui/Table'
 
 import TableRow from './loaders/TableRow'
-import Loading from './Loading'
+import Loading from '@kozydozy/shared/Loading'
 
-import type { CheckboxProps } from '@/components/ui/Checkbox'
-import type { MkEquineProps } from '@/components/ui/MkEquine'
+import type { CheckboxProps } from '@kozydozy/ui/Checkbox'
+import type { SkeletonProps } from '@kozydozy/ui'
 import type { ForwardedRef, ChangeEvent } from 'react'
 
 
@@ -96,8 +96,8 @@ type DataTableProps<T> = {
     onSort?: (sort: OnSortParam) => void
     pageSizes?: number[]
     selectable?: boolean
-    mkEquineAvatarColumns?: number[]
-    mkEquineAvatarProps?: MkEquineProps
+    avatarColumns?: number[]
+    avatarProps?: SkeletonProps
     pagingData?: {
         total: number
         pageIndex: number
@@ -186,7 +186,7 @@ function _DataTable<T>(
     ref: ForwardedRef<DataTableResetHandle>,
 ) {
     const {
-        mkEquineAvatarColumns,
+        avatarColumns,
         columns: columnsProp = [],
         data = [],
         loading = false,
@@ -197,7 +197,7 @@ function _DataTable<T>(
         onSort,
         pageSizes = [10, 25, 50, 100],
         selectable = false,
-        mkEquineAvatarProps,
+        avatarProps,
         pagingData = {
             total: 0,
             pageIndex: 1,
@@ -371,8 +371,8 @@ function _DataTable<T>(
                         <TableRow
                             columns={(finalColumns as Array<T>).length}
                             rows={pagingData.pageSize}
-                            avatarInColumns={mkEquineAvatarColumns}
-                            avatarProps={mkEquineAvatarProps}
+                            avatarInColumns={avatarColumns}
+                            avatarProps={avatarProps}
                         />
                     ) : (
                         <StyledTBody>

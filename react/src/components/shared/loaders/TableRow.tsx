@@ -1,20 +1,20 @@
 import styled from 'styled-components'
 
-import MkEquine from '@/components/ui/MkEquine'
-import Table from '@/components/ui/Table'
+import { Skeleton } from '@kozydozy/ui'
+import Table from '@kozydozy/ui/Table'
 
-import type { MkEquineProps } from '@/components/ui/MkEquine'
+import type { SkeletonProps } from '@kozydozy/ui'
 
 type TableRowProps = {
     columns?: number
     rows?: number
     avatarInColumns?: number[]
-    avatarProps?: MkEquineProps
+    avatarProps?: SkeletonProps
 }
 
 const { Tr, Td, TBody } = Table
 
-const MkEquineRow = styled.div`
+const SkeletonRow = styled.div`
     display: flex;
     flex: 1 1 auto;
     align-items: center;
@@ -31,17 +31,17 @@ const TableRow = (props: TableRowProps) => {
                     {Array.from(new Array(columns), (_, i) => i + 0).map(
                         (col) => (
                             <Td key={`col-${col}`}>
-                                <MkEquineRow>
+                                <SkeletonRow>
                                     {avatarInColumns.includes(col) && (
                                         <div>
-                                            <MkEquine
+                                            <Skeleton
                                                 variant="circle"
                                                 {...avatarProps}
                                             />
                                         </div>
                                     )}
-                                    <MkEquine />
-                                </MkEquineRow>
+                                    <Skeleton />
+                                </SkeletonRow>
                             </Td>
                         ),
                     )}

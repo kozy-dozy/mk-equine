@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import DataTable from '@/components/shared/DataTable'
-import Badge from '@/components/ui/Badge'
-import Button from '@/components/ui/Button'
+import Badge from '@kozydozy/ui/Badge'
+import Button from '@kozydozy/ui/Button'
 import { useAppDispatch, useAppSelector } from '@/store'
 import { getDashboard, getOverview } from '@/store/slices/admin/dashboardSlice'
 
